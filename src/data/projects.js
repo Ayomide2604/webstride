@@ -15,6 +15,7 @@ const projects = [
 		description: "description 2",
 		category: "web design",
 	},
+	
 ];
 
 export default projects;

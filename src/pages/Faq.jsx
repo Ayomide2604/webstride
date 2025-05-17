@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BiEnvelope, BiChat, BiPhone } from "react-icons/bi";
+import { FaCaretDown } from "react-icons/fa";
 
 const Faq = () => {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -75,8 +76,8 @@ const Faq = () => {
 								>
 									<div className="faq-header" onClick={() => toggleFAQ(index)}>
 										<h3>{item.question}</h3>
-										<i
-											className={`bi bi-chevron-down faq-toggle ${
+										<FaCaretDown
+											className={` faq-toggle ${
 												activeIndex === index ? "rotate" : ""
 											}`}
 										/>

@@ -29,10 +29,7 @@ const Header = () => {
 	return (
 		<header id="header" className="header d-flex align-items-center fixed-top">
 			<div className="container position-relative d-flex align-items-center justify-content-between">
-				<a
-					href="index.html"
-					className="logo d-flex align-items-center me-auto me-xl-0"
-				>
+				<a href="/" className="logo d-flex align-items-center me-auto me-xl-0">
 					{/* Uncomment the line below if you also wish to use an image logo */}
 					{/* <img src="assets/img/logo.webp" alt=""> */}
 					<h1 className="sitename">WebStride</h1>
@@ -61,7 +58,7 @@ const Header = () => {
 				</nav>
 
 				<div className="d-flex align-items-center justify-content-center">
-					<a className="btn-getstarted d-md-block d-none mx-5" href="#about">
+					<a className="btn-getstarted d-md-block d-none mx-5" href="#contact">
 						Get Started
 					</a>
 
