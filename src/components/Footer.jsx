@@ -1,6 +1,12 @@
+import {
+	BiLogoTwitter,
+	BiLogoFacebook,
+	BiLogoInstagram,
+	BiLogoLinkedin,
+} from "react-icons/bi";
 const Footer = () => {
 	return (
-		<footer id="footer" className="footer light-background">
+		<footer id="footer" className="footer">
 			<div className="container footer-top">
 				<div className="row gy-4">
 					<div className="col-lg-4 col-md-6 footer-about">
@@ -19,16 +25,16 @@ const Footer = () => {
 						</div>
 						<div className="social-links d-flex mt-4">
 							<a href="">
-								<i className="bi bi-twitter-x" />
+								<BiLogoTwitter className="bi bi-twitter-x" />
 							</a>
 							<a href="">
-								<i className="bi bi-facebook" />
+								<BiLogoFacebook className="bi bi-facebook" />
 							</a>
 							<a href="">
-								<i className="bi bi-instagram" />
+								<BiLogoInstagram className="bi bi-instagram" />
 							</a>
 							<a href="">
-								<i className="bi bi-linkedin" />
+								<BiLogoLinkedin className="bi bi-linkedin" />
 							</a>
 						</div>
 					</div>
@@ -117,12 +123,10 @@ const Footer = () => {
 			<div className="container copyright text-center mt-4">
 				<p>
 					© <span>Copyright</span>{" "}
-					<strong className="px-1 sitename">WebStride</strong>{" "}
+					<strong className="px-1 sitename">WebStride</strong>
 					<span>All Rights Reserved</span>
 				</p>
-				<div className="credits">
-					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-				</div>
+				<div className="credits"></div>
 			</div>
 		</footer>
 	);

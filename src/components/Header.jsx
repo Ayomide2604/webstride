@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
-import { BiMenu, BiX } from "react-icons/bi";
+import { BiMenu, BiX, BiSun, BiMoon } from "react-icons/bi";
+import sun from "../assets/img/sun.svg";
+import moon from "../assets/img/moon.svg";
+import close from "../assets/img/close.svg";
+import menu from "../assets/img/menu.svg";
+
+const cursorPointer = {
+	cursor: "pointer",
+};
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
 		if (menuOpen) {
@@ -10,7 +19,13 @@ const Header = () => {
 		} else {
 			document.body.classList.remove("mobile-nav-active");
 		}
-	}, [menuOpen]);
+		if (darkMode) {
+			document.body.classList.add("dark-background");
+		} else {
+			document.body.classList.remove("dark-background");
+		}
+	}, [menuOpen, darkMode]);
+
 	return (
 		<header id="header" className="header d-flex align-items-center fixed-top">
 			<div className="container position-relative d-flex align-items-center justify-content-between">
@@ -40,74 +55,55 @@ const Header = () => {
 							<a href="#portfolio">Portfolio</a>
 						</li>
 						<li>
-							<a href="#pricing">Pricing</a>
-						</li>
-						<li>
-							<a href="#team">Team</a>
-						</li>
-						<li className="dropdown">
-							<a href="#">
-								<span>Dropdown</span>{" "}
-								<i className="bi bi-chevron-down toggle-dropdown" />
-							</a>
-							<ul>
-								<li>
-									<a href="#">Dropdown 1</a>
-								</li>
-								<li className="dropdown">
-									<a href="#">
-										<span>Deep Dropdown</span>{" "}
-										<i className="bi bi-chevron-down toggle-dropdown" />
-									</a>
-									<ul>
-										<li>
-											<a href="#">Deep Dropdown 1</a>
-										</li>
-										<li>
-											<a href="#">Deep Dropdown 2</a>
-										</li>
-										<li>
-											<a href="#">Deep Dropdown 3</a>
-										</li>
-										<li>
-											<a href="#">Deep Dropdown 4</a>
-										</li>
-										<li>
-											<a href="#">Deep Dropdown 5</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Dropdown 2</a>
-								</li>
-								<li>
-									<a href="#">Dropdown 3</a>
-								</li>
-								<li>
-									<a href="#">Dropdown 4</a>
-								</li>
-							</ul>
-						</li>
-						<li>
 							<a href="#contact">Contact</a>
 						</li>
 					</ul>
+				</nav>
+
+				<div className="d-flex align-items-center justify-content-center">
+					<a className="btn-getstarted d-md-block d-none mx-5" href="#about">
+						Get Started
+					</a>
+
+					{!menuOpen && (
+						<div>
+							<img
+								src={sun}
+								height={15}
+								alt="light-mode"
+								onClick={() => setDarkMode(false)}
+								className={darkMode ? "d-block mx-3" : "d-none"}
+								style={cursorPointer}
+							/>
+
+							<img
+								src={moon}
+								height={15}
+								alt="dark-mode"
+								onClick={() => setDarkMode(true)}
+								className={darkMode ? "d-none mx-3" : "d-block"}
+								style={cursorPointer}
+							/>
+						</div>
+					)}
 
 					{menuOpen ? (
 						<BiX
-							className="mobile-nav-toggle d-xl-none"
+							className="mobile-nav-toggle d-xl-none pb-2 "
 							onClick={() => setMenuOpen(false)}
+							style={cursorPointer}
 						/>
 					) : (
-						<BiMenu
-							className="mobile-nav-toggle d-xl-none"
+						<img
+							src={menu}
+							alt=""
+							height={20}
+							className="mobile-nav-toggle d-xl-none mx-3"
 							onClick={() => setMenuOpen(true)}
+							style={cursorPointer}
 						/>
 					)}
-				</nav>
-				<a className="btn-getstarted d-md-block d-none" href="#about">
-					Get Started
-				</a>
+				</div>
 			</div>
 		</header>
 	);
