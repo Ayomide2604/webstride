@@ -2,6 +2,7 @@ import React from "react";
 import { BiBell, BiHeadphone, BiWindow } from "react-icons/bi";
 import { FaGear } from "react-icons/fa6";
 import heroImage from "../assets/img/illustration/illustration-16.webp";
+import hero from "../assets/img/hero.png";
 
 const Hero = () => {
 	return (
@@ -34,7 +35,7 @@ const Hero = () => {
 					<div className="col-lg-6">
 						<div className="hero-image">
 							<img
-								src={heroImage}
+								src={hero}
 								alt="Web Development"
 								className="img-fluid"
 								loading="lazy"

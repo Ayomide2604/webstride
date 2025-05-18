@@ -11,7 +11,7 @@ const ChatBox = ({ onClose }) => {
 			</div>
 			<div className="chat-messages">
 				<div className="message received">
-					<div className="message-content">Hello! How can I help you?</div>
+					<div className="message-content px-3">Hello! How can I help you?</div>
 				</div>
 			</div>
 			<div className="chat-input">
@@ -21,7 +21,7 @@ const ChatBox = ({ onClose }) => {
 						className="form-control"
 						placeholder="Type a message..."
 					/>
-					<button className="btn btn-primary" type="button">
+					<button className="btn btn-primary btn-sm" type="button">
 						Send
 					</button>
 				</div>

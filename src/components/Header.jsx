@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { BiMenu, BiX, BiSun, BiMoon } from "react-icons/bi";
+import { BiX } from "react-icons/bi";
 import sun from "../assets/img/sun.svg";
 import moon from "../assets/img/moon.svg";
-import close from "../assets/img/close.svg";
 import menu from "../assets/img/menu.svg";
+import logo from "../assets/img/logo.png";
 
 const cursorPointer = {
 	cursor: "pointer",
@@ -27,13 +27,17 @@ const Header = () => {
 	}, [menuOpen, darkMode]);
 
 	return (
-		<header id="header" className="header d-flex align-items-center fixed-top">
+		<header id="header" className="header d-flex align-items-center fixed-top  shadow-sm">
 			<div className="container position-relative d-flex align-items-center justify-content-between">
 				<a href="/" className="logo d-flex align-items-center me-auto me-xl-0">
-					{/* Uncomment the line below if you also wish to use an image logo */}
-					{/* <img src="assets/img/logo.webp" alt=""> */}
-					<h1 className="sitename">WebStride</h1>
-					<span>.</span>
+					<img
+						src={logo}
+						alt="logo"
+						style={{
+							minHeight: "60px",
+							minWidth: "60px",
+						}}
+					/>
 				</a>
 				<nav id="navmenu" className="navmenu">
 					<ul>

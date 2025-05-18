@@ -1,9 +1,7 @@
 import React from "react";
 import { BiCheckCircle } from "react-icons/bi";
 import about1 from "../assets/img/about/about-portrait-1.webp";
-import about2 from "../assets/img/about/about-8.webp";
-import about3 from "../assets/img/about/about-12.webp";
-
+import about from "../assets/img/about.jpg";
 const About = () => {
 	return (
 		<section id="about" className="about section">
@@ -22,23 +20,20 @@ const About = () => {
 						</p>
 						<ul>
 							<li>
-								<BiCheckCircle />
+								<BiCheckCircle className="mr-2" size={20} />
 								<span>Custom digital strategies aligned with your goals.</span>
 							</li>
 							<li>
-								<BiCheckCircle />
+								<BiCheckCircle className="mr-2" size={20} />
 								<span>
 									High-quality solutions delivered on time and within budget.
 								</span>
 							</li>
 							<li>
-								<BiCheckCircle />
+								<BiCheckCircle className="mr-2" size={20} />
 								<span>Customer-centric approach for outstanding results.</span>
 							</li>
 						</ul>
-						{/* <a href="#" className="read-more mb-3">
-							<span>Read More</span>
-						</a> */}
 					</div>
 					<div
 						className="col-lg-6 about-images"
@@ -46,30 +41,12 @@ const About = () => {
 						data-aos-delay={200}
 					>
 						<div className="row gy-4">
-							<div className="col-lg-6 mb-3">
+							<div className="col-lg-12 mb-3">
 								<img
-									src={about1}
+									src={about}
 									className="img-fluid"
 									alt="Team Collaboration"
 								/>
-							</div>
-							<div className="col-lg-6">
-								<div className="row gy-4">
-									<div className="col-lg-12 mb-3">
-										<img
-											src={about2}
-											className="img-fluid"
-											alt="Project Planning"
-										/>
-									</div>
-									<div className="col-lg-12 mb-3">
-										<img
-											src={about3}
-											className="img-fluid"
-											alt="Creative Design"
-										/>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>

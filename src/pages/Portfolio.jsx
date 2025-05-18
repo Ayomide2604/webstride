@@ -2,6 +2,7 @@ import React from "react";
 import Project from "../components/Project";
 import projects from "../data/projects";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -22,6 +23,7 @@ const Portfolio = () => {
 					slidesPerView={2}
 					loop={true}
 					spaceBetween={50}
+					modules={[Pagination]}
 					pagination={{ clickable: true }}
 				>
 					{projects.map((project) => (

@@ -1,9 +1,11 @@
+import React from "react";
 import {
 	BiLogoTwitter,
 	BiLogoFacebook,
 	BiLogoInstagram,
 	BiLogoLinkedin,
 } from "react-icons/bi";
+
 const Footer = () => {
 	return (
 		<footer id="footer" className="footer">
@@ -14,26 +16,42 @@ const Footer = () => {
 							<span className="sitename">WebStride</span>
 						</a>
 						<div className="footer-contact pt-3">
-							<p>A108 Adam Street</p>
-							<p>New York, NY 535022</p>
+							<p>43 Ojileru Street</p>
+							<p>Oworoshoki, Lagos, Nigeria</p>
 							<p className="mt-3">
-								<strong>Phone:</strong> <span>+1 5589 55488 55</span>
+								<strong>Phone:</strong> <span>+234 812 666 0484</span>
 							</p>
 							<p>
-								<strong>Email:</strong> <span>info@example.com</span>
+								<strong>Email:</strong> <span>info@webstride.com</span>
 							</p>
 						</div>
-						<div className="social-links d-flex mt-4">
-							<a href="">
+						<div className="social-links d-flex my-4">
+							<a
+								href="https://twitter.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<BiLogoTwitter className="bi bi-twitter-x" />
 							</a>
-							<a href="">
+							<a
+								href="https://facebook.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<BiLogoFacebook className="bi bi-facebook" />
 							</a>
-							<a href="">
+							<a
+								href="https://instagram.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<BiLogoInstagram className="bi bi-instagram" />
 							</a>
-							<a href="">
+							<a
+								href="https://linkedin.com"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<BiLogoLinkedin className="bi bi-linkedin" />
 							</a>
 						</div>
@@ -45,16 +63,16 @@ const Footer = () => {
 								<a href="#">Home</a>
 							</li>
 							<li>
-								<a href="#">About us</a>
+								<a href="#">About Us</a>
 							</li>
 							<li>
 								<a href="#">Services</a>
 							</li>
 							<li>
-								<a href="#">Terms of service</a>
+								<a href="#">Terms of Service</a>
 							</li>
 							<li>
-								<a href="#">Privacy policy</a>
+								<a href="#">Privacy Policy</a>
 							</li>
 						</ul>
 					</div>
@@ -68,53 +86,44 @@ const Footer = () => {
 								<a href="#">Web Development</a>
 							</li>
 							<li>
-								<a href="#">Product Management</a>
+								<a href="#">Backend Support</a>
 							</li>
 							<li>
-								<a href="#">Marketing</a>
-							</li>
-							<li>
-								<a href="#">Graphic Design</a>
+								<a href="#">Software as a Service</a>
 							</li>
 						</ul>
 					</div>
 					<div className="col-lg-2 col-md-3 footer-links">
-						<h4>Hic solutasetp</h4>
+						<h4>Resources</h4>
 						<ul>
 							<li>
-								<a href="#">Molestiae accusamus iure</a>
+								<a href="#">Blog</a>
 							</li>
 							<li>
-								<a href="#">Excepturi dignissimos</a>
+								<a href="#">Case Studies</a>
 							</li>
 							<li>
-								<a href="#">Suscipit distinctio</a>
+								<a href="#">FAQs</a>
 							</li>
 							<li>
-								<a href="#">Dilecta</a>
-							</li>
-							<li>
-								<a href="#">Sit quas consectetur</a>
+								<a href="#">Tutorials</a>
 							</li>
 						</ul>
 					</div>
 					<div className="col-lg-2 col-md-3 footer-links">
-						<h4>Nobis illum</h4>
+						<h4>Company</h4>
 						<ul>
 							<li>
-								<a href="#">Ipsam</a>
+								<a href="#">About Us</a>
 							</li>
 							<li>
-								<a href="#">Laudantium dolorum</a>
+								<a href="#">Careers</a>
 							</li>
 							<li>
-								<a href="#">Dinera</a>
+								<a href="#">Press</a>
 							</li>
 							<li>
-								<a href="#">Trodelas</a>
-							</li>
-							<li>
-								<a href="#">Flexo</a>
+								<a href="#">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -126,7 +135,9 @@ const Footer = () => {
 					<strong className="px-1 sitename">WebStride</strong>
 					<span>All Rights Reserved</span>
 				</p>
-				<div className="credits"></div>
+				<div className="credits">
+					Designed by <a href="https://webstride.com">WebStride</a>
+				</div>
 			</div>
 		</footer>
 	);
