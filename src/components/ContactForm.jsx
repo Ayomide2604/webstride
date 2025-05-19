@@ -1,11 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+	const form = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"service_d1jb09a",
+				"template_d1pc929",
+				form.current,
+				"rVThJft0mEh2z1jPH"
+			)
+			.then(
+				() => {
+					alert("Message sent!");
+					form.current.reset();
+				},
+				(error) => {
+					alert("Failed to send message");
+					console.error(error);
+				}
+			);
+	};
 	return (
 		<div className="p-4 border rounded">
 			<h4 className="mb-3">Get in Touch</h4>
 
-			<form>
+			<form ref={form} onSubmit={sendEmail}>
 				<div className="mb-3">
 					<label htmlFor="name" className="form-label">
 						Name

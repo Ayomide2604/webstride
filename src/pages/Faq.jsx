@@ -49,16 +49,19 @@ const Faq = () => {
 									free to reach out to us. We're here to help!
 								</p>
 								<div className="contact-options">
-									<a href="#" className="contact-option">
-										<BiEnvelope size={20} className="mr-2" />
+									<a
+										href="mailto:webstridestudios@gmail.com"
+										className="contact-option"
+									>
+										<BiEnvelope size={20} className="mx-2" />
 										<span>Email Support</span>
 									</a>
 									<a href="#" className="contact-option">
-										<BiChat size={20} className="mr-2" />
+										<BiChat size={20} className="mx-2" />
 										<span>Chat with Us</span>
 									</a>
-									<a href="#" className="contact-option">
-										<BiPhone size={20} className="mr-2" />
+									<a href="tel:+2348126660484" className="contact-option">
+										<BiPhone size={20} className="mx-2" />
 										<span>Call Us</span>
 									</a>
 								</div>

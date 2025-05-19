@@ -1,5 +1,5 @@
 import React from "react";
-import { BiMap, BiPhone, BiAlarm } from "react-icons/bi";
+import { BiMap, BiPhone, BiAlarm, BiEnvelope } from "react-icons/bi";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
@@ -30,24 +30,19 @@ const Contact = () => {
 							<div className="mb-3">
 								<BiPhone size={24} color="#7570F5" />
 							</div>
-							<h4>Contact</h4>
-							<p>
-								Mobile: +234 (812) 666-0484
-								<br />
-								Email: info@webstride.dev
-							</p>
+							<h4>Phone</h4>
+							<p>Mobile: +234 (812) 666-0484</p>
 						</div>
 					</div>
 					<div className="col-lg-4 mb-3">
 						<div className="p-4 border rounded h-100 shadow-sm">
 							<div className="mb-3">
-								<BiAlarm size={24} color="#7570F5" />
+								<BiEnvelope size={24} color="#7570F5" />
 							</div>
-							<h4>Working Hours</h4>
+							<h4>Email</h4>
 							<p>
-								Mon - Sat: 9:00 AM - 6:00 PM
+								Email: webstridestudios@gmail.com
 								<br />
-								Sunday: Closed
 							</p>
 						</div>
 					</div>
